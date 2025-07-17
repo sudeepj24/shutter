@@ -1,0 +1,66 @@
+/* Metrics Section */
+.metrics {
+  background: #f7f7fa;
+  padding: 48px 0;
+  position: relative;
+}
+.metrics-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 220px;
+}
+.metric-icon-bg {
+  width: 120px;
+  height: 120px;
+  background: #ededf2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.metric-icon {
+  width: 72px;
+  height: 72px;
+}
+.metric-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #23253a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.metric-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: #23253a;
+  text-align: center;
+  max-width: 320px;
+}
+@media (max-width: 1100px) {
+  .metrics-container {
+    flex-direction: column;
+    gap: 36px;
+    padding: 0 16px;
+    align-items: center;
+  }
+  .metric {
+    min-width: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+} 

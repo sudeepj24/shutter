@@ -1,0 +1,113 @@
+/* Footer */
+.footer {
+    background-image: url('../../assets/images/img_rectangle_33.png');
+    background-size: cover;
+    background-position: center;
+    padding: 46px 16px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1204px;
+    margin: 0 auto;
+}
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.footer-logo img {
+    width: 100%;
+    max-width: 334px;
+    height: auto;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+.social-links img:hover {
+    transform: scale(1.1);
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-section h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ececec;
+    margin-bottom: 20px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-item img {
+    width: 34px;
+    height: 34px;
+}
+.contact-item span {
+    font-size: 18px;
+    color: #ececec;
+    line-height: 1.4;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-links a {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ececec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #ffffff;
+}
+@media (min-width: 640px) {
+    .footer-main {
+        flex-direction: row;
+    }
+    .footer-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+@media (min-width: 768px) {
+    .footer-section h4 {
+        font-size: 30px;
+    }
+    .contact-item span {
+        font-size: 24px;
+    }
+    .footer-links a {
+        font-size: 30px;
+    }
+}
+@media (min-width: 1280px) {
+    .footer-content {
+        padding: 0 56px;
+    }
+} 

@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure House - High Security Shutters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Urbanist', sans-serif;
+            line-height: 1.6;
+            color: #1c1e36;
+            background-color: #fbfbfb;
+        }
+        
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: rgba(110, 110, 110, 0.5);
+            box-shadow: 0px 4px 4px rgba(136, 136, 136, 1);
+            padding: 14px 56px;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            width: 30%;
+            max-width: 352px;
+        }
+        
+        .nav-menu {
+            display: none;
+            gap: 68px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            font-size: 24px;
+            font-weight: 500;
+            color: #fff7f7;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #e5e5e5;
+        }
+        
+        .hamburger {
+            display: block;
+            color: #fff7f7;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('assets/images/img_rectangle_3.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 60px 16px;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #fff7f7;
+            margin-bottom: 20px;
+            max-width: 90%;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff7f7;
+            margin-bottom: 40px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 40px;
+        }
+        
+        .rating img {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .rating-text {
+            font-size: 18px;
+            color: #e5e5e5;
+        }
+        
+        .cta-button {
+            background-color: #f5f5f5;
+            color: #000000;
+            padding: 22px;
+            border: none;
+            border-radius: 34px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: #e5e5e5;
+            transform: translateY(-2px);
+        }
+        
+        .side-cta {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #cdcdcd;
+            padding: 20px 10px;
+            border-radius: 24px 24px 0 0;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: none;
+        }
+        
+        /* Product Overview */
+        .product-overview {
+            padding: 80px 16px;
+        }
+        
+        .overview-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .gallery-main {
+            border-radius: 30px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .gallery-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .gallery-side img {
+            border-radius: 30px;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .overview-text {
+            width: 100%;
+        }
+        
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        
+        .section-label img {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .section-label span {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1c1e36;
+        }
+        
+        .overview-text h2 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #1c1e36;
+            margin-bottom: 20px;
+        }
+        
+        .overview-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #585757;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .feature-chip {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #ffffff;
+            border: 1px solid #d1d1d1;
+            border-radius: 20px;
+            padding: 16px;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-chip img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .feature-chip span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000000;
+        }
+        
+        /* Shutter Types */
+        .shutter-types {
+            background-color: #f5f5f5;
+            border: 1px solid #d1d1d1;
+            padding: 48px 16px;
+            margin: 80px 0;
+        }
+        
+        .shutter-types h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            color: #1c1e36;
+            margin-bottom: 30px;
+        }
+        
+        .shutter-types p {
+            font-size: 18px;
+            text-align: center;
+            color: #3f3f3f;
+            margin-bottom: 54px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .shutter-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 54px;
+        }
+        
+        .shutter-card {
+            background-color: #f3f3f3;
+            border: 1px solid #d1d1d1;
+            border-radius: 24px;
+            padding: 30px 20px;
+            box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+        
+        .shutter-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .shutter-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        
+        .shutter-card p {
+            font-size: 18px;
+            color: #000000;
+            text-align: left;
+        }
+        
+        .enquire-btn {
+            background-color: #1c1e36;
+            color: #f5f5f5;
+            padding: 8px 38px 8px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .enquire-btn:hover {
+            background-color: #2a2d4a;
+            transform: translateY(-2px);
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 16px;
+        }
+        
+        .why-choose h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            color: #1c1e36;
+            margin-bottom: 20px;
+        }
+        
+        .why-choose > p {
+            font-size: 18px;
+            text-align: center;
+            color: #3f3f3f;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+        
+        .benefit-card {
+            background-color: #f8f8f8;
+            border: 1px solid #d1d1d1;
+            border-radius: 24px;
+            padding: 26px 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        
+        .benefit-card img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #121212;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card p {
+            font-size: 16px;
+            color: #121212;
+            line-height: 1.4;
+        }
+        
+        /* Stats */
+        .stats {
+            background-color: #f5f5f5;
+            border: 1px solid #d1d1d1;
+            padding: 50px 16px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-icon {
+            width: 150px;
+            height: 150px;
+            background-color: #ececec;
+            border-radius: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .stat-icon img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1c1e36;
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1c1e36;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 16px;
+        }
+        
+        .testimonials h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            color: #1c1e36;
+            margin-bottom: 20px;
+        }
+        
+        .testimonials > p {
+            font-size: 18px;
+            text-align: center;
+            color: #3f3f3f;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 38px;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f8f8;
+            border: 1px solid #d1d1d1;
+            border-radius: 16px;
+            padding: 14px;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+        
+        .quote-icon {
+            width: 54px;
+            height: 54px;
+        }
+        
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 24px;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.4;
+            color: #1f1f1f;
+            margin-bottom: 22px;
+        }
+        
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .google-logo {
+            width: 100px;
+            height: 44px;
+        }
+        
+        .author-info {
+            text-align: right;
+        }
+        
+        .author-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f1f1f;
+            margin-bottom: 6px;
+        }
+        
+        .stars {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .stars img {
+            width: 20px;
+            height: 18px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 16px;
+        }
+        
+        .contact h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            color: #1c1e36;
+            margin-bottom: 20px;
+        }
+        
+        .contact > p {
+            font-size: 18px;
+            text-align: center;
+            color: #1c1e36;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+        }
+        
+        .contact-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        
+        .contact-form {
+            background-color: #f8f8f8;
+            border: 1px solid #d1d1d1;
+            border-radius: 30px;
+            padding: 36px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+        }
+        
+        .contact-form h3 {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            color: #1f1f1f;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form > p {
+            font-size: 18px;
+            color: #1e1e1e;
+            margin-bottom: 48px;
+            line-height: 1.4;
+        }
+        
+        .form-group {
+            margin-bottom: 32px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 18px 12px;
+            border: 1px solid #ababab;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #3f3f3f;
+            background-color: white;
+        }
+        
+        .form-input::placeholder {
+            color: #3f3f3f;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 18px 12px;
+            border: 1px solid #ababab;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #3f3f3f;
+            background-color: white;
+            appearance: none;
+            background-image: url('assets/images/img_arrow_3.svg');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ababab;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #3f3f3f;
+            background-color: white;
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #1c1e36;
+            color: #fffdfd;
+            padding: 8px 24px 8px 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2a2d4a;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-image: url('assets/images/img_rectangle_33.png');
+            background-size: cover;
+            background-position: center;
+            padding: 46px 16px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            max-width: 1204px;
+            margin: 0 auto;
+        }
+        
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .footer-logo img {
+            width: 100%;
+            max-width: 334px;
+            height: auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+        
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .footer-section h4 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #ececec;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item img {
+            width: 34px;
+            height: 34px;
+        }
+        
+        .contact-item span {
+            font-size: 18px;
+            color: #ececec;
+            line-height: 1.4;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            font-size: 24px;
+            font-weight: 500;
+            color: #ececec;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .rating-text {
+                font-size: 20px;
+            }
+            
+            .cta-button {
+                font-size: 20px;
+            }
+            
+            .gallery-side {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .shutter-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .form-row {
+                flex-direction: row;
+            }
+            
+            .footer-main {
+                flex-direction: row;
+            }
+            
+            .footer-info {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 32px;
+            }
+            
+            .hamburger {
+                display: none;
+            }
+            
+            .nav-menu {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 50px;
+                max-width: 68%;
+            }
+            
+            .hero-subtitle {
+                font-size: 24px;
+            }
+            
+            .rating-text {
+                font-size: 24px;
+            }
+            
+            .cta-button {
+                font-size: 24px;
+            }
+            
+            .side-cta {
+                display: block;
+            }
+            
+            .overview-content {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .image-gallery {
+                width: 50%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            
+            .gallery-main {
+                grid-row: 1 / 3;
+                height: 100%;
+            }
+            
+            .gallery-side {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            
+            .overview-text {
+                width: 50%;
+                padding-left: 40px;
+            }
+            
+            .overview-text h2 {
+                font-size: 46px;
+            }
+            
+            .overview-text p {
+                font-size: 22px;
+            }
+            
+            .feature-chip span {
+                font-size: 18px;
+            }
+            
+            .shutter-types h2 {
+                font-size: 46px;
+            }
+            
+            .shutter-types p {
+                font-size: 24px;
+            }
+            
+            .shutter-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .shutter-card h3 {
+                font-size: 32px;
+            }
+            
+            .shutter-card p {
+                font-size: 24px;
+            }
+            
+            .enquire-btn {
+                font-size: 24px;
+            }
+            
+            .why-choose h2 {
+                font-size: 46px;
+            }
+            
+            .why-choose > p {
+                font-size: 24px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .benefit-card h3 {
+                font-size: 24px;
+            }
+            
+            .benefit-card p {
+                font-size: 19px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .stat-number {
+                font-size: 40px;
+            }
+            
+            .stat-text {
+                font-size: 24px;
+            }
+            
+            .testimonials h2 {
+                font-size: 46px;
+            }
+            
+            .testimonials > p {
+                font-size: 24px;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .testimonial-text {
+                font-size: 18px;
+            }
+            
+            .author-name {
+                font-size: 18px;
+            }
+            
+            .contact h2 {
+                font-size: 45px;
+            }
+            
+            .contact > p {
+                font-size: 20px;
+            }
+            
+            .contact-content {
+                flex-direction: row;
+            }
+            
+            .contact-image {
+                width: 40%;
+                height: 500px;
+            }
+            
+            .contact-form {
+                width: 60%;
+            }
+            
+            .contact-form h3 {
+                font-size: 30px;
+            }
+            
+            .contact-form > p {
+                font-size: 24px;
+            }
+            
+            .form-input {
+                font-size: 18px;
+            }
+            
+            .form-select {
+                font-size: 18px;
+            }
+            
+            .form-textarea {
+                font-size: 18px;
+            }
+            
+            .submit-btn {
+                font-size: 24px;
+            }
+            
+            .footer-section h4 {
+                font-size: 30px;
+            }
+            
+            .contact-item span {
+                font-size: 24px;
+            }
+            
+            .footer-links a {
+                font-size: 30px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 50px;
+            }
+            
+            .overview-text h2 {
+                font-size: 46px;
+            }
+            
+            .shutter-types {
+                padding: 48px;
+            }
+            
+            .why-choose {
+                padding: 80px 48px;
+            }
+            
+            .stats {
+                padding: 50px;
+            }
+            
+            .testimonials {
+                padding: 80px 48px;
+            }
+            
+            .contact {
+                padding: 80px 48px;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .container {
+                padding: 0 56px;
+            }
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsudosecure7800back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="assets/images/img_image_16_1.png" alt="Secure House Logo" class="logo" />
+            <nav class="nav-menu">
+                <a href="#products">Products</a>
+                <a href="#projects">Our Projects</a>
+                <a href="#about">About Us</a>
+            </nav>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>High Security Security Shutters for Homes & Businesses</h1>
+            <p class="hero-subtitle">Automated. Durable. Custom-Built for Your Property.</p>
+            <div class="rating">
+                <img src="assets/images/img_image_1.png" alt="Google Rating" />
+                <span class="rating-text">4.9/5 on Google • 500+ Reviews</span>
+            </div>
+            <a href="#contact" class="cta-button">Book A Free Visit Survey</a>
+        </div>
+        <div class="side-cta">
+            <span>Book a Site Visit</span>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="product-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="image-gallery">
+                    <img src="assets/images/img_rectangle_4.png" alt="Security Shutter" class="gallery-main" />
+                    <div class="gallery-side">
+                        <img src="assets/images/img_rectangle_5.png" alt="Shutter Detail" />
+                        <img src="assets/images/img_rectangle_6.png" alt="Shutter Installation" />
+                    </div>
+                </div>
+                <div class="overview-text">
+                    <div class="section-label">
+                        <img src="assets/images/img_roller_shutter_door.png" alt="Product Icon" />
+                        <span>Product Overview</span>
+                    </div>
+                    <h2>Protection, Privacy and Style</h2>
+                    <p>High-quality security shutters play a crucial role in protecting both residential & commercial properties. It serves as strong physical barrier against theft and harsh weather conditions, enhancing safety. In addition to deterring unauthorized access, security shutters also provide insulation, and increased privacy.</p>
+                    <div class="features">
+                        <div class="feature-chip">
+                            <img src="assets/images/img_bolt.png" alt="Electric Icon" />
+                            <span>Electric or manual operation</span>
+                        </div>
+                        <div class="feature-chip">
+                            <img src="assets/images/img_clipboard.png" alt="Insurance Icon" />
+                            <span>Insurance-approved options</span>
+                        </div>
+                        <div class="feature-chip">
+                            <img src="assets/images/img_controller.png" alt="Remote Icon" />
+                            <span>Remote control integration</span>
+                        </div>
+                        <div class="feature-chip">
+                            <img src="assets/images/img_muscular.png" alt="Fitting Icon" />
+                            <span>Internal or external fitting</span>
+                        </div>
+                        <div class="feature-chip">
+                            <img src="assets/images/img_gold_ingot.png" alt="Steel Icon" />
+                            <span>Made-to-measure steel options</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shutter Types -->
+    <section class="shutter-types">
+        <div class="container">
+            <h2>Choose the Right Shutter for Your Space</h2>
+            <p>Explore our diverse collection of shutters tailored for every style, space. Perfect for both homes and businesses.</p>
+            <div class="shutter-grid">
+                <div class="shutter-card">
+                    <img src="assets/images/img_rectangle_22.png" alt="Roller Shutters" />
+                    <h3>Roller Shutters</h3>
+                    <p>Compact and robust for modern homes</p>
+                </div>
+                <div class="shutter-card">
+                    <img src="assets/images/img_rectangle_21.png" alt="Perforated Shutters" />
+                    <h3>Perforated Shutters</h3>
+                    <p>Visibility with protection for storefronts</p>
+                </div>
+                <div class="shutter-card">
+                    <img src="assets/images/img_rectangle_23.png" alt="Lattice Shutters" />
+                    <h3>Lattice Shutters</h3>
+                    <p>Discreet internal solutions</p>
+                </div>
+            </div>
+            <button class="enquire-btn">
+                Enquire Now
+                <img src="assets/images/img_arrow_4.svg" alt="Arrow" />
+            </button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Our Security Shutters</h2>
+            <p>Discover the perfect blend of strength and reliability engineered to protect your property without compromising on design</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="assets/images/img_clipboard.png" alt="Insurance Icon" />
+                    <h3>Insurance-approved designs</h3>
+                    <p>Peace of mind with shutters that meet top-tier safety standards.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="assets/images/img_pantone.png" alt="Color Icon" />
+                    <h3>Custom color finishes</h3>
+                    <p>Tailored to match your style—no compromises.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="assets/images/img_feather.png" alt="Quiet Icon" />
+                    <h3>Quiet and smooth operation</h3>
+                    <p>Effortless use, whisper-quiet every time.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="assets/images/img_strength.png" alt="Strength Icon" />
+                    <h3>Strength-tested materials</h3>
+                    <p>Built tough to stand the test of time.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="assets/images/img_idea.png" alt="Smart Icon" />
+                    <h3>Smart automation compatibility</h3>
+                    <p>Modern convenience at your fingertips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/img_install.svg" alt="Installation Icon" />
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Installations Across the UK</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/img_experience.svg" alt="Experience Icon" />
+                    </div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">15+ Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/img_trust.svg" alt="Trust Icon" />
+                    </div>
+                    <div class="stat-text">Trusted by Residential & Commercial Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Client Say</h2>
+            <p>Real feedback from real people—discover how our shutters made a lasting impact on their homes and businesses.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/img_group.svg" alt="Quote" class="quote-icon" />
+                        <img src="assets/images/img_avatar_image_50.png" alt="Customer" class="avatar" />
+                    </div>
+                    <p class="testimonial-text">They don't just sell doors — they provide peace of mind. We trust them for all our premium and bulletproof door needs.</p>
+                    <div class="testimonial-footer">
+                        <img src="assets/images/img_image_197.png" alt="Google" class="google-logo" />
+                        <div class="author-info">
+                            <div class="author-name">- Neha Shah</div>
+                            <div class="stars">
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/img_vector.svg" alt="Quote" class="quote-icon" />
+                        <img src="assets/images/img_avatar_image_50_50x50.png" alt="Customer" class="avatar" />
+                    </div>
+                    <p class="testimonial-text">They don't just sell doors — they provide peace of mind. We trust them for all our premium and bulletproof door needs.</p>
+                    <div class="testimonial-footer">
+                        <img src="assets/images/img_image_197.png" alt="Google" class="google-logo" />
+                        <div class="author-info">
+                            <div class="author-name">- Monica P.</div>
+                            <div class="stars">
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/img_group_indigo_900.svg" alt="Quote" class="quote-icon" />
+                        <img src="assets/images/img_avatar_image_50_1.png" alt="Customer" class="avatar" />
+                    </div>
+                    <p class="testimonial-text">They don't just sell doors — they provide peace of mind. We trust them for all our premium and bulletproof door needs.</p>
+                    <div class="testimonial-footer">
+                        <img src="assets/images/img_image_197.png" alt="Google" class="google-logo" />
+                        <div class="author-info">
+                            <div class="author-name">Rahul Rao</div>
+                            <div class="stars">
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                                <img src="assets/images/img_star.svg" alt="Star" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch With Us Today</h2>
+            <p>Discover how we can enhance your home's security and beauty with a personalized consultation.</p>
+            <div class="contact-content">
+                <img src="assets/images/img_rectangle_32.png" alt="Contact Image" class="contact-image" />
+                <div class="contact-form">
+                    <h3>Get In Touch</h3>
+                    <p>We're here to help! If you have any questions how our high-quality shutters and customized solutions can enhance your space or meet your project needs, feel free to reach out to us.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" required />
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <input type="email" class="form-input" placeholder="Email" required />
+                                <input type="tel" class="form-input" placeholder="Phone Number" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" required>
+                                <option value>Select Shutter Type</option>
+                                <option value="roller">Roller Shutters</option>
+                                <option value="perforated">Perforated Shutters</option>
+                                <option value="lattice">Lattice Shutters</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea" placeholder="Full Postal Address" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Book Survey
+                            <img src="assets/images/img_arrow_1.svg" alt="Arrow" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="assets/images/img_41129442974_1.png" alt="Secure House Logo" />
+                    <div class="social-links">
+                        <img src="assets/images/img_fe_facebook.svg" alt="Facebook" />
+                        <img src="assets/images/img_ri_instagram_fill.svg" alt="Instagram" />
+                        <img src="assets/images/img_mdi_youtube.svg" alt="YouTube" />
+                        <img src="assets/images/img_mdi_pinterest.svg" alt="Pinterest" />
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <img src="assets/images/img_mingcute_location_line.svg" alt="Location" />
+                                <span>Unit 20 Ribocon Way<br />LU4 9UR</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="assets/images/img_material_symbols_call_outline.svg" alt="Phone" />
+                                <span>02078594207</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="assets/images/img_material_symbols_mail_rounded.svg" alt="Email" />
+                                <span>info@secure-house.co.uk</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Guarantee</h4>
+                        <h4>Trade</h4>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#about">About Us</a>
+                        <a href="#terms">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you soon.');
+        });
+
+        // Add loading animation to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

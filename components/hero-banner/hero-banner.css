@@ -1,0 +1,116 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('../../assets/images/img_rectangle_3.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(28, 30, 54, 0.35);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 80px;
+}
+.hero h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.google-icon {
+  width: 32px;
+  height: 32px;
+}
+.rating-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 400;
+}
+.cta-button {
+  background: #fff;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 48px;
+  margin-top: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.cta-button:hover {
+  background: #f5f5f5;
+  color: #000;
+  transform: translateY(-2px);
+}
+.sticky-side-cta {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  background: #fff;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  padding: 16px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.2s, color 0.2s;
+}
+.sticky-side-cta:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .cta-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+  .sticky-side-cta {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+} 

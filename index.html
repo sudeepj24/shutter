@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shutter Website</title>
+  <!-- Component CSS files -->
+  <link rel="stylesheet" href="components/header/header.css">
+  <link rel="stylesheet" href="components/hero-banner/hero-banner.css">
+  <link rel="stylesheet" href="components/product-overview/product-overview.css">
+  <link rel="stylesheet" href="components/choose-shutter/choose-shutter.css">
+  <link rel="stylesheet" href="components/why-choose-us/why-choose-us.css">
+  <link rel="stylesheet" href="components/metrics/metrics.css">
+  <link rel="stylesheet" href="components/testimonials/testimonials.css">
+  <link rel="stylesheet" href="components/get-in-touch/get-in-touch.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="hero-banner"></div>
+  <div id="product-overview"></div>
+  <div id="choose-shutter"></div>
+  <div id="why-choose-us"></div>
+  <div id="metrics"></div>
+  <div id="testimonials"></div>
+  <div id="get-in-touch"></div>
+  <div id="footer"></div>
+
+  <!-- jQuery to load components -->
+  <script>
+    $(function() {
+      $("#header").load("components/header/header.html");
+      $("#hero-banner").load("components/hero-banner/hero-banner.html");
+      $("#product-overview").load("components/product-overview/product-overview.html");
+      $("#choose-shutter").load("components/choose-shutter/choose-shutter.html");
+      $("#why-choose-us").load("components/why-choose-us/why-choose-us.html");
+      $("#metrics").load("components/metrics/metrics.html");
+      $("#testimonials").load("components/testimonials/testimonials.html");
+      $("#get-in-touch").load("components/get-in-touch/get-in-touch.html");
+      $("#footer").load("components/footer/footer.html");
+    });
+  </script>
+  <!-- Component JS files (if any) -->
+  <script src="components/header/header.js"></script>
+  <script src="components/hero-banner/hero-banner.js"></script>
+  <script src="components/product-overview/product-overview.js"></script>
+  <script src="components/choose-shutter/choose-shutter.js"></script>
+  <script src="components/why-choose-us/why-choose-us.js"></script>
+  <script src="components/metrics/metrics.js"></script>
+  <script src="components/testimonials/testimonials.js"></script>
+  <script src="components/get-in-touch/get-in-touch.js"></script>
+  <script src="components/footer/footer.js"></script>
+</body>
+</html> 
