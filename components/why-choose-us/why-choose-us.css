@@ -1,6 +1,6 @@
 /* Why Choose Us Section */
 .why-choose {
-  background: #f7f7fa;
+  background: #fff;
   padding: 64px 0 32px 0;
   position: relative;
 }
@@ -13,17 +13,17 @@
   align-items: center;
 }
 .why-choose-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  color: #23253a;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  color: #1C1E36;
   text-align: center;
   margin-bottom: 0;
 }
 .why-choose-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 22px;
-  color: #585757;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  color: #404040;
   text-align: center;
   margin: 18px 0 40px 0;
   max-width: 700px;
@@ -44,10 +44,10 @@
   margin-top: 32px;
 }
 .why-choose-card {
-  background: #fff;
+  background: #F9F9F9;
   border-radius: 24px;
-  box-shadow: 0 4px 16px rgba(44,44,44,0.10);
-  border: 2px solid #ececec;
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #D2D2D2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -63,23 +63,24 @@
   border: 2px solid #23253a;
 }
 .why-choose-icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   margin-bottom: 18px;
   display: block;
 }
 .why-choose-card-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #23253a;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  font-style: SemiBold;
+  font-weight: 600;
+  color: #121212;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
 .why-choose-card-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  color: #23253a;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 19px;
+  color: rgba(18, 18, 18, 1);
 }
 .sticky-side-cta {
   position: fixed;
@@ -88,7 +89,7 @@
   transform: translateY(-50%) rotate(-90deg);
   background: #fff;
   color: #23253a;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 20px;
   font-weight: 500;
   border: none;
@@ -108,10 +109,11 @@
     padding: 0 16px;
   }
   .why-choose-title {
-    font-size: 32px;
+    font-size: 36px;
   }
   .why-choose-subtitle {
-    font-size: 16px;
+    font-size: 22px;
+    max-width: 100% !important;
   }
   .why-choose-cards, .why-choose-cards-bottom {
     flex-direction: column;
@@ -119,12 +121,101 @@
     align-items: center;
   }
   .why-choose-card {
+    display: flex !important; 
+    flex-direction: row;
+    align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 24px 16px;
   }
   .why-choose-icon {
+    width: 50px;
+    height: 50px;
     margin-bottom: 16px;
+    margin-bottom: 16px;
+    margin-left: 45px;
+    margin-right: 55px;
   }
-} 
+  .card-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-choose {
+    padding: 48px 0 24px 0;
+  }
+
+  .why-choose-container {
+    padding: 0 12px;
+  }
+
+  .why-choose-title {
+    font-size: 32px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .why-choose-subtitle {
+    font-size: 20px;
+    text-align: center;
+    max-width: 100%;
+    margin: 16px 0 32px 0;
+  }
+
+  .why-choose-cards,
+  .why-choose-cards-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .why-choose-card {
+    display: flex !important; 
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+    min-width: unset;
+    min-height: unset;
+  }
+
+  .card-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-choose-card-title {
+    font-size: 20px;
+  }
+
+  .why-choose-card-desc {
+    font-size: 18px;
+  }
+
+  .why-choose-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    margin-left: 45px;
+    margin-right: 55px;
+  }
+
+  .sticky-side-cta {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    top: auto;
+    transform: none;
+    rotate: 0deg;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+}

@@ -1,13 +1,14 @@
 /* Metrics Section */
 .metrics {
-  background: #f7f7fa;
+  background:#F5F5F5; ;
   padding: 48px 0;
   position: relative;
+  max-width: 100%;
 }
 .metrics-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 56px;
+  padding: 0 120px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,7 +37,7 @@
   height: 72px;
 }
 .metric-number {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 44px;
   font-weight: 700;
   color: #23253a;
@@ -44,23 +45,107 @@
   text-align: center;
 }
 .metric-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 22px;
   color: #23253a;
   text-align: center;
   max-width: 320px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
+
+  .metrics {
+    padding: 48px 20px;
+  }
+
   .metrics-container {
     flex-direction: column;
-    gap: 36px;
+    gap: 20px;
     padding: 0 16px;
     align-items: center;
   }
   .metric {
+    display: flex;
+    flex-direction: row;
     min-width: 0;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
-} 
+  .metric-icon-bg {
+    margin-right: 30px;
+
+  }
+
+  .metric-number {
+    font-size: 32px;
+  }
+
+  .metric-icon{
+    width:60px;
+    height: 60px;
+  }
+  
+  .metric-icon-bg{
+    height: 100px;
+    width: 100px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .metrics {
+    padding: 40px 16px;
+  }
+  
+  .metrics-container {
+    padding: 0;
+    gap: 16px;
+  }
+  
+  .metric {
+    max-width: 100%;
+  }
+  
+  .metric-number {
+    font-size: 32px;
+  }
+  
+  .metric-text {
+    font-size: 20px;
+  }
+  
+  .metric-icon-bg {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  .metric-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics {
+    padding: 32px 12px;
+  }
+  
+  .metric {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .metric-icon-bg {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .metric-number {
+    font-size: 32px;
+  }
+  
+  .metric-text {
+    font-size: 20px;
+  }
+}

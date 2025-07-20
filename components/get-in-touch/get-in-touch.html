@@ -1,39 +1,44 @@
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Get In Touch With Us Today</h2>
-        <p>Discover how we can enhance your home's security and beauty with a personalized consultation.</p>
-        <div class="contact-content">
-            <img src="assets/images/img_rectangle_32.png" alt="Contact Image" class="contact-image" />
-            <div class="contact-form">
-                <h3>Get In Touch</h3>
-                <p>We're here to help! If you have any questions how our high-quality shutters and customized solutions can enhance your space or meet your project needs, feel free to reach out to us.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Name" required />
-                    </div>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <input type="email" class="form-input" placeholder="Email" required />
-                            <input type="tel" class="form-input" placeholder="Phone Number" required />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-select" required>
-                            <option value>Select Shutter Type</option>
-                            <option value="roller">Roller Shutters</option>
-                            <option value="perforated">Perforated Shutters</option>
-                            <option value="lattice">Lattice Shutters</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-textarea" placeholder="Full Postal Address" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        Book Survey
-                        <img src="assets/images/img_arrow_1.svg" alt="Arrow" />
-                    </button>
-                </form>
-            </div>
-        </div>
+<section class="contact-section" id="get-in-touch">
+  <h2 class="contact-title">Get In Touch With Us Today</h2>
+  <p class="contact-subtitle">Discover how we can enhance your home's security and beauty with a personalized consultation.</p>
+
+  <div class="contact-container">
+    <div class="contact-image">
+      <img src="assets/images/img_rectangle_32.png" alt="House with shutters" />
     </div>
-</section> 
+
+    <div class="contact-form-wrapper">
+      <h3 class="form-heading">Get In Touch</h3>
+      <p class="form-description">
+        We're here to help! If you have any questions about how our high-quality shutters and customized solutions can enhance your space or meet your project needs, feel free to reach out to us.
+      </p>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Name" required />
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email" />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+        </div>
+        <select name="interest" required>
+          <option value="">Select Shutter Type</option>
+          <option value="roller">Roller Shutters</option>
+          <option value="plantation">Plantation Shutters</option>
+          <option value="security">Security Shutters</option>
+        </select>
+        <textarea name="address" placeholder="Full Postal Address" rows="4"></textarea>
+        <button type="submit" class="contact-btn">Book Survey <span>↗</span></button>
+        
+        <!-- Status message container -->
+        <div id="contactStatus" class="contact-status" style="display: none;">
+          <div class="status-content">
+            <span class="status-title"></span>
+            <span class="status-message"></span>
+            <div class="status-progress">
+              <div class="status-progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

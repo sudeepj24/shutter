@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shutter Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Door Website</title>
   <!-- Component CSS files -->
   <link rel="stylesheet" href="components/header/header.css">
   <link rel="stylesheet" href="components/hero-banner/hero-banner.css">
@@ -13,7 +14,116 @@
   <link rel="stylesheet" href="components/testimonials/testimonials.css">
   <link rel="stylesheet" href="components/get-in-touch/get-in-touch.css">
   <link rel="stylesheet" href="components/footer/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <style>
+    /* Sticky Book a Site Visit Button */
+    .sticky-site-visit-btn {
+      position: fixed;
+      bottom: 240px;
+      right: 0;
+      transform: rotate(-90deg);
+      background: #CECECE;
+      color: #23253a;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
+      border-radius: 25px 25px 0 0;
+      padding: 12px 24px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      white-space: nowrap;
+      transform-origin: bottom right;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+
+    /* Hide on mobile devices */
+    @media (max-width: 768px) {
+      .sticky-site-visit-btn {
+        display: none;
+      }
+    }
+
+    /* Mobile Sticky Bottom Bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+      padding: 1px 12px 1px 12px;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .mobile-sticky-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+      text-align: center;
+    }
+
+    .mobile-sticky-item:active {
+      background: #f0f0f0;
+      transform: scale(0.92);
+    }
+
+    .mobile-sticky-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #23253a;
+      line-height: 1;
+    }
+
+    .mobile-sticky-text {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #23253a;
+      text-align: center;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: 100%;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .whatsapp-icon {
+      color: #25D366;
+    }
+
+    /* Show mobile sticky bar only on mobile */
+    @media (max-width: 768px) {
+      .mobile-sticky-bar {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="header"></div>
@@ -26,6 +136,39 @@
   <div id="get-in-touch"></div>
   <div id="footer"></div>
 
+  <!-- Sticky Book a Site Visit Button -->
+  <div id="sticky-site-visit-btn" class="sticky-site-visit-btn" onclick="scrollToContactForm()">
+    Book a Site Visit
+  </div>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-item" onclick="makeCall()">
+      <div class="mobile-sticky-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="mobile-sticky-text">Call</div>
+    </div>
+    <div class="mobile-sticky-item" onclick="scrollToContactForm()">
+      <div class="mobile-sticky-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="mobile-sticky-text">Get a Quote</div>
+    </div>
+    <div class="mobile-sticky-item" onclick="openWhatsApp()">
+      <div class="mobile-sticky-icon whatsapp-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="#25D366"/>
+        </svg>
+      </div>
+      <div class="mobile-sticky-text">WhatsApp</div>
+    </div>
+  </div>
+
   <!-- jQuery to load components -->
   <script>
     $(function() {
@@ -35,8 +178,16 @@
       $("#choose-shutter").load("components/choose-shutter/choose-shutter.html");
       $("#why-choose-us").load("components/why-choose-us/why-choose-us.html");
       $("#metrics").load("components/metrics/metrics.html");
-      $("#testimonials").load("components/testimonials/testimonials.html");
-      $("#get-in-touch").load("components/get-in-touch/get-in-touch.html");
+      $("#testimonials").load("components/testimonials/testimonials.html", function() {
+        if (typeof initTestimonialsSlider === 'function') {
+          initTestimonialsSlider();
+        }
+      });
+      $("#get-in-touch").load("components/get-in-touch/get-in-touch.html", function() {
+        if (typeof initContactForm === 'function') {
+          initContactForm();
+        }
+      });
       $("#footer").load("components/footer/footer.html");
     });
   </script>
@@ -50,5 +201,35 @@
   <script src="components/testimonials/testimonials.js"></script>
   <script src="components/get-in-touch/get-in-touch.js"></script>
   <script src="components/footer/footer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    // Function to scroll to contact form
+    function scrollToContactForm() {
+      const contactSection = document.getElementById('get-in-touch');
+      if (contactSection) {
+        const offset = -50; // Offset in pixels to scroll below the title
+        const elementPosition = contactSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Function to make a phone call
+    function makeCall() {
+      window.location.href = 'tel:+441234567890';
+    }
+
+    // Function to open WhatsApp
+    function openWhatsApp() {
+      const message = encodeURIComponent('Hi! I\'m interested in your security shutters. Can you help me?');
+      const whatsappUrl = `https://wa.me/441234567890?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
 </body>
 </html> 

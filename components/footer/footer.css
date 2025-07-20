@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-top: 40px;
 }
 .footer-links a {
     font-size: 24px;
@@ -109,5 +110,34 @@
 @media (min-width: 1280px) {
     .footer-content {
         padding: 0 56px;
+    }
+}
+
+/* Mobile sticky bar spacing */
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: 80px; /* Account for mobile sticky bar height */
+    }
+    
+    /* Mobile typography updates */
+    .footer-section h4 {
+        font-size: 20px; /* Subtitle size */
+    }
+    
+    .contact-item span {
+        font-size: 18px; /* Content size */
+    }
+    
+    .footer-links a {
+        font-size: 20px; /* Subtitle size */
+    }
+    
+    /* Fix spacing between footer sections on mobile */
+    .footer-info {
+        gap: 20px; /* Reduce gap between sections */
+    }
+    
+    .footer-links {
+        margin-top: 0; /* Remove top margin that creates extra space */
     }
 } 
