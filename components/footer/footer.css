@@ -1,198 +1,129 @@
-/* Footer */
-.footer {
-    background-image: url('../../assets/images/img_rectangle_33.png');
-    background-size: cover;
-    background-position: center;
-    padding: 46px 16px;
+/* Custom Footer Styles */
+.custom-footer {
+  background-image: url('../../assets/images/img_rectangle_33.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 16px;
 }
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    max-width: 1204px;
-    margin: 0 auto;
+.custom-footer-content {
+  max-width: 1204px;
+  margin: 0 auto;
 }
-.footer-main {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.custom-footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: stretch;
 }
-.footer-logo {
-    display: flex;
-    flex-direction: column;
+.custom-footer-logo-block,
+.custom-footer-section.custom-footer-contact,
+.custom-footer-links {
+  background: none;
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+.custom-footer-logo-block {
+  gap: 24px;
+}
+.custom-footer-logo-img {
+  width: 120px;
+  height: auto;
+}
+.custom-footer-social-block {
+  display: flex;
+  gap: 18px;
+}
+.custom-footer-social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+.custom-footer-social-icon:hover {
+  transform: scale(1.1);
+}
+.custom-footer-section-title {
+  font-size: 22px;
+  color: #ececec;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.custom-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: left;
+}
+.custom-footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-footer-contact-icon {
+  width: 20px;
+  height: 20px;
+}
+.custom-footer-contact-text {
+  font-size: 18px;
+  text-decoration: none;
+  color: #ececec;
+  line-height: 1.4;
+}
+.custom-footer-contact-text:hover {
+  text-decoration: underline;
+}
+.custom-footer-links {
+  gap: 18px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.custom-footer-link {
+  font-size: 18px;
+  color: #ececec;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+.custom-footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (min-width: 900px) {
+  .custom-footer-top {
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .custom-footer-logo-block,
+  .custom-footer-section.custom-footer-contact,
+  .custom-footer-links {
+    min-width: 0;
+    max-width: none;
+    flex: 1 1 0;
     align-items: center;
-    gap: 40px;
-}
-.footer-logo img {
-    width: 100%;
-    max-width: 334px;
-    height: auto;
-}
-.social-links {
-    display: flex;
     justify-content: center;
-    gap: 40px;
+    height: 100%;
+  }
 }
-.social-links img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-.social-links img:hover {
-    transform: scale(1.1);
-}
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.footer-section h4 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #ececec;
-    margin-bottom: 20px;
-}
-.footer-section h4 a {
-    color: #ececec;
-    text-decoration: none;
-    font-size: inherit;
-    font-weight: inherit;
-    transition: color 0.3s ease;
-}
-.footer-section h4 a:hover {
-    color: #ffffff;
-}
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.contact-item img {
-    width: 24px;
-    height: 24px;
-}
-.contact-item span {
-    font-size: 18px;
-    color: #ececec;
-    line-height: 1.4;
-}
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-}
-.footer-links a {
-    font-size: 24px;
-    font-weight: 500;
-    color: #ececec;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-.footer-links a:hover {
-    color: #ffffff;
-}
-.footer-logo .social-links a {
-    display: inline-block;
-}
-.footer-logo .social-links a img {
-    width: 28px;
-    height: 28px;
-}
-.footer-section h4 a,
-.contact-item a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-.footer-section h4 a:hover,
-.contact-item a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-@media (min-width: 640px) {
-    .footer-main {
-        flex-direction: row;
-        gap: 240px; /* Increased gap between logo/social and Get In Touch section */
-    }
-    .footer-info {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 280px; /* Increased gap between Get In Touch and the section to the right */
-    }
-    .contact-info {
-        min-width: 220px;
-        flex-shrink: 0;
-        word-break: break-all;
-    }
-    .footer-section h4 {
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .footer-section .footer-title-main {
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-}
-@media (min-width: 768px) {
-    .footer-section h4 {
-        font-size: 18px;
-    }
-    .contact-item span {
-        font-size: 18px;
-    }
-    .footer-links a {
-        font-size: 30px;
-    }
-}
-@media (min-width: 1280px) {
-    .footer-content {
-        padding: 0 56px;
-    }
-}
-
-/* Mobile sticky bar spacing */
-@media (max-width: 768px) {
-    .footer {
-        padding-bottom: 80px; /* Account for mobile sticky bar height */
-    }
-    
-    /* Mobile typography updates */
-    .footer-section h4 {
-        font-size: 20px; /* Subtitle size */
-    }
-    
-    .contact-item span {
-        font-size: 18px; /* Content size */
-    }
-    
-    .footer-links a {
-        font-size: 20px; /* Subtitle size */
-    }
-    
-    /* Fix spacing between footer sections on mobile */
-    .footer-info {
-        gap: 20px; /* Reduce gap between sections */
-    }
-    
-    .footer-links {
-        margin-top: 0; /* Remove top margin that creates extra space */
-    }
-    .footer-links {
-        display: flex;
-    }
-} 
-@media (min-width: 769px) {
-    .footer-links {
-        display: none;
-    }
-    .footer-section h4 a {
-        display: inline;
-    }
+@media (max-width: 899px) {
+  .custom-footer {
+    padding-bottom: 60px; /* 40px + 10px for mobile */
+  }
 } 
