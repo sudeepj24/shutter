@@ -1,0 +1,43 @@
+<div id="contact-popup-overlay" class="contact-popup-overlay" style="display: none;">
+  <div class="contact-popup-modal" role="dialog" aria-modal="true" tabindex="-1">
+    <button class="contact-popup-close" aria-label="Close popup">&times;</button>
+    <section class="contact-section contact-popup-section">
+      <h2 class="contact-title">Get In Touch With Us Today</h2>
+      <p class="contact-subtitle">Discover how we can enhance your home's security and beauty with a personalized consultation.</p>
+      <div class="contact-container">
+        
+        <div class="contact-form-wrapper">
+          <h3 class="form-heading">Get In Touch</h3>
+         
+          <form class="contact-form" id="contactPopupForm">
+            <input type="text" name="name" placeholder="Name" required />
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Email" />
+              <input type="tel" name="phone" placeholder="Phone Number" />
+            </div>
+            <select name="interest" required>
+              <option value="">Select Shutter Type</option>
+              <option value="roller">Roller Shutters</option>
+              <option value="plantation">Plantation Shutters</option>
+              <option value="security">Security Shutters</option>
+              <option value="security">Roller Shutters</option>
+              <option value="security"> Electric Security Shutters</option>
+            </select>
+            <textarea name="address" placeholder="Full Postal Address" rows="4"></textarea>
+            <button type="submit" class="contact-btn">Book Survey <span>↗</span></button>
+            <!-- Status message container -->
+            <div id="contactPopupStatus" class="contact-status" style="display: none;">
+              <div class="status-content">
+                <span class="status-title"></span>
+                <span class="status-message"></span>
+                <div class="status-progress">
+                  <div class="status-progress-bar"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</div> 

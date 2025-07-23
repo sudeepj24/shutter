@@ -1,0 +1,83 @@
+/* Popup Overlay */
+.contact-popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(28, 30, 54, 0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+/* Modal Centered */
+.contact-popup-modal {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 600px;
+  width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: popup-fade-in 0.3s;
+}
+
+@keyframes popup-fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Close Icon */
+.contact-popup-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #23253a;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.contact-popup-close:hover {
+  color: #e53935;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .contact-popup-modal {
+    max-width: 98vw;
+    padding: 18px 6px 18px 6px;
+    border-radius: 16px;
+  }
+  .contact-popup-close {
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+  }
+}
+
+/* Hide scroll on body when popup is open */
+body.contact-popup-open {
+  overflow: hidden;
+}
+
+/* Inherit and adjust form styles for popup */
+.contact-popup-section .contact-container {
+  gap: 24px;
+}
+.contact-popup-section .contact-form-wrapper {
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  max-width: 100%;
+}

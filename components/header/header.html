@@ -1,14 +1,26 @@
 <header class="header">
   <div class="header-content">
-    <div class="logo-block">
-      <span class="logo">Secure House<sup>™</sup></span>
-      <span class="tagline">SECURITY DOOR AND WINDOW SPECIALIST</span>
+    <div class="logo-block" style="flex-direction: row; align-items: center; gap: 18px;">
+      <img src="assets/images/logo.png" alt="Logo" class="header-logo-img" style="height: 60px; width: auto;" />
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <span class="logo">Secure House<sup>™</sup></span>
+        <span class="tagline">SECURITY DOOR AND WINDOW SPECIALIST</span>
+      </div>
     </div>
-    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Moved outside of <a> -->
-    <nav class="nav-menu" id="navMenu">
-      <a href="#products">PRODUCTS</a>
-      <a href="#projects">OUR PROJECTS</a>
-      <a href="#about">ABOUT US</a>
-    </nav>
+    <div class="header-actions-desktop">
+      <a href="tel:+4402078594207" class="header-call-btn">
+        <span class="header-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z" fill="#4C55C8"/></svg>
+        </span>
+        <span class="header-btn-text">Call Now</span>
+      </a>
+      <a href="https://wa.me/447778840416" target="_blank" class="header-whatsapp-btn">
+        <span class="header-btn-icon">
+          <img src="assets/images/wa-ic.png" alt="WhatsApp" style="width: 22px; height: 22px; object-fit: contain;" />
+        </span>
+        <span class="header-btn-text">Chat on WhatsApp</span>
+      </a>
+    </div>
+    <!-- Hamburger menu for mobile removed as per instruction -->
   </div>
 </header>

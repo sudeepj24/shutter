@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="components/testimonials/testimonials.css">
   <link rel="stylesheet" href="components/get-in-touch/get-in-touch.css">
   <link rel="stylesheet" href="components/footer/footer.css">
+  <link rel="stylesheet" href="components/contact-popup/contact-popup.css">
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -124,8 +125,23 @@
       }
     }
   </style>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M6HFBJF2');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HFBJF2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <div id="header"></div>
   <div id="hero-banner"></div>
   <div id="product-overview"></div>
@@ -189,6 +205,15 @@
         }
       });
       $("#footer").load("components/footer/footer.html");
+      // Load contact popup
+      $("body").append($('<div id="contact-popup-dynamic"></div>').load("components/contact-popup/contact-popup.html", function() {
+        if (typeof initPopupEvents === 'function') initPopupEvents();
+        if (typeof initContactPopupForm === 'function') initContactPopupForm();
+        // Attach scroll event for popup after HTML is loaded
+        if (localStorage.getItem('contactPopupClosed') !== 'true' && typeof window.onScroll === 'function') {
+          window.addEventListener('scroll', window.onScroll);
+        }
+      }));
     });
   </script>
   <!-- Component JS files (if any) -->
@@ -201,6 +226,7 @@
   <script src="components/testimonials/testimonials.js"></script>
   <script src="components/get-in-touch/get-in-touch.js"></script>
   <script src="components/footer/footer.js"></script>
+  <script src="components/contact-popup/contact-popup.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
@@ -208,10 +234,11 @@
     function scrollToContactForm() {
       const contactSection = document.getElementById('get-in-touch');
       if (contactSection) {
-        const offset = -50; // Offset in pixels to scroll below the title
+        // Use a larger offset for mobile to ensure the title is visible
+        const isMobile = window.innerWidth <= 900;
+        const offset = isMobile ? -30 : -50;
         const elementPosition = contactSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
-        
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
@@ -221,13 +248,13 @@
 
     // Function to make a phone call
     function makeCall() {
-      window.location.href = 'tel:+441234567890';
+      window.location.href = 'tel:+4402078594207';
     }
 
     // Function to open WhatsApp
     function openWhatsApp() {
-      const message = encodeURIComponent('Hi! I\'m interested in your security shutters. Can you help me?');
-      const whatsappUrl = `https://wa.me/441234567890?text=${message}`;
+      const message = encodeURIComponent('Hello, I would like to enquire about your services.');
+      const whatsappUrl = `https://wa.me/447778840416?text=${message}`;
       window.open(whatsappUrl, '_blank');
     }
   </script>

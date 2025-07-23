@@ -47,15 +47,6 @@ html, body {
   margin-bottom: 0;
 }
 
-.choose-shutter-arrows {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 16px;
-}
-
 .arrow-btn {
   width: 44px;
   height: 44px;
@@ -191,9 +182,7 @@ html, body {
     font-size: 20px;
   }
 
-  .choose-shutter-arrows {
-    display: none;
-  }
+  
 
   .shutter-cards {
     flex-direction: column;

@@ -1,10 +1,9 @@
 
   document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("navMenu");
-
-    hamburger.addEventListener("click", function () {
-      navMenu.classList.toggle("show");
-    });
+    // No hamburger/nav menu logic needed
   });
+
+  function makeCall() {
+    window.location.href = 'tel:+441234567890';
+  }
 

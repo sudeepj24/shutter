@@ -98,9 +98,9 @@ function initContactForm() {
     .then(res => res.json())
     .then(result => {
       if (result.success === 'true' || result.success === true) {
-        showStatus('success', 'Your message was sent successfully!');
-        // Reset form
-        form.reset();
+        // Redirect to thank you page on success
+        window.location.href = 'https://secure-house.co.uk/thank-you/';
+        // form.reset(); // No need to reset since redirecting
       } else {
         showStatus('error', result.message || 'Failed to send message. Please try again.');
       }
