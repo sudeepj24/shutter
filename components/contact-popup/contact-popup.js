@@ -1,7 +1,8 @@
 // Contact Popup Component JS
 (function() {
+  const pageKey = 'contactPopupClosed_' + window.location.pathname;
   let popupShown = false;
-  let popupClosed = localStorage.getItem('contactPopupClosed') === 'true';
+  let popupClosed = localStorage.getItem(pageKey) === 'true';
   let popupOverlay, popupModal, closeBtn, firstFocusable, lastFocusable;
 
   function showPopup() {
@@ -25,7 +26,7 @@
     popupOverlay.style.display = 'none';
     document.body.classList.remove('contact-popup-open');
     popupShown = true;
-    localStorage.setItem('contactPopupClosed', 'true');
+    localStorage.setItem(pageKey, 'true');
     document.removeEventListener('keydown', handleKeydown);
   }
 
